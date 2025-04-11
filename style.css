@@ -37,7 +37,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem;
+  padding: 1.5rem 2rem; /* Reduced top/bottom padding */
   position: sticky;
   top: 0;
   background-color: var(--blue);
@@ -116,14 +116,16 @@ main {
 }
 
 section {
-  padding: 2rem 0; /* Changed from 4rem to 2rem */
+  padding: 1.5rem 0; /* Reduced from 2rem to 1.5rem */
 }
 
+/* Reduced spacing for hero section */
 .hero {
-  min-height: 60vh; /* Reduced from 70vh */
+  min-height: 50vh; /* Reduced from 60vh to 50vh */
   display: flex;
   align-items: center;
-  padding-bottom: 1rem; /* Added to reduce space after hero */
+  padding-bottom: 0.5rem; /* Reduced from 1rem to 0.5rem */
+  padding-top: 0.5rem; /* Added to reduce space at top */
 }
 
 h1 {
@@ -135,7 +137,7 @@ h1 {
 h2 {
   font-size: 1rem;
   font-weight: 600;
-  margin-bottom: 2rem;
+  margin-bottom: 1.5rem; /* Reduced from 2rem to 1.5rem */
   letter-spacing: 1px;
 }
 
@@ -149,11 +151,12 @@ p {
   max-width: 700px;
 }
 
+/* Reduced spacing for dividers */
 .divider {
   height: 1px;
   background-color: var(--light-gray);
   width: 100%;
-  margin: 1rem 0; /* Added to control spacing around dividers */
+  margin: 0.5rem 0; /* Reduced from 1rem to 0.5rem */
 }
 
 /* Work section */
@@ -261,25 +264,34 @@ section {
   animation: fadeIn 0.8s ease-out forwards;
 }
 
-/* Responsive */
+/* Updated Responsive Styles for Horizontal Mobile Navigation */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
     align-items: flex-start;
+    padding: 1rem; /* Further reduced padding on mobile */
   }
 
   nav {
-    margin-top: 1rem;
     width: 100%;
+    margin-top: 1rem; /* Reduced from 1.5rem */
   }
 
   nav ul {
-    flex-direction: column;
+    flex-direction: row; /* Keep horizontal layout */
+    justify-content: space-between; /* Distribute items evenly */
+    width: 100%;
+    padding: 0;
   }
 
   nav ul li {
-    margin: 0.5rem 0;
-    margin-left: 0;
+    margin: 0; /* Remove left margin */
+  }
+
+  nav ul li a {
+    font-size: 0.9rem; /* Slightly smaller font for mobile */
+    padding: 0.5rem 0;
+    display: block;
   }
 
   h1 {
@@ -287,7 +299,8 @@ section {
   }
 
   .hero {
-    min-height: 50vh;
+    min-height: 40vh; /* Further reduced on mobile */
+    padding-top: 0; /* Remove top padding on mobile */
   }
 
   .interest-categories {
@@ -297,6 +310,27 @@ section {
   .social-links a {
     width: 50px;
     height: 50px;
+  }
+
+  /* Reduce section padding on mobile */
+  section {
+    padding: 1rem 0;
+  }
+}
+
+/* For very small screens */
+@media (max-width: 400px) {
+  nav ul li a {
+    font-size: 0.8rem; /* Even smaller font for very small screens */
+  }
+
+  .logo {
+    font-size: 0.9rem;
+  }
+
+  .circle {
+    width: 16px;
+    height: 16px;
   }
 }
 
@@ -336,8 +370,6 @@ section {
   border-bottom: 2px solid var(--gold);
 }
 
-/* Removed the arrow after content and hover effects */
-
 /* Add a subtle pulse animation to encourage clicking */
 @keyframes subtle-pulse {
   0% {
@@ -375,4 +407,9 @@ section {
 
 .social-links a:hover::after {
   opacity: 1;
+}
+
+/* Specific adjustments for about-page section */
+#about-page {
+  padding-top: 1rem; /* Reduced padding specifically for this section */
 }
