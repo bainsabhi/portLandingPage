@@ -1,0 +1,123 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 112" shape-rendering="crispEdges">
+
+  <!-- ── Outer cassette body (dark brown border) ── -->
+  <rect x="8"   y="8"   width="144" height="80" fill="#3b2020"/>
+
+  <!-- ── Rounded corner pixels (cut the sharp corners) ── -->
+  <!-- top-left -->
+  <rect x="8"  y="8"  width="4" height="4" fill="none" style="fill:#e8e0d0"/>
+  <rect x="12" y="8"  width="4" height="4" fill="#3b2020"/>
+  <rect x="8"  y="12" width="4" height="4" fill="#3b2020"/>
+  <!-- top-right -->
+  <rect x="148" y="8"  width="4" height="4" fill="none" style="fill:#e8e0d0"/>
+  <rect x="144" y="8"  width="4" height="4" fill="#3b2020"/>
+  <rect x="148" y="12" width="4" height="4" fill="#3b2020"/>
+  <!-- bottom-left -->
+  <rect x="8"  y="84" width="4" height="4" fill="none" style="fill:#e8e0d0"/>
+  <rect x="12" y="84" width="4" height="4" fill="#3b2020"/>
+  <rect x="8"  y="80" width="4" height="4" fill="#3b2020"/>
+  <!-- bottom-right -->
+  <rect x="148" y="84" width="4" height="4" fill="none" style="fill:#e8e0d0"/>
+  <rect x="144" y="84" width="4" height="4" fill="#3b2020"/>
+  <rect x="148" y="80" width="4" height="4" fill="#3b2020"/>
+
+  <!-- ── Main label — warm yellow ── -->
+  <rect x="12" y="12" width="136" height="72" fill="#e8b84b"/>
+
+  <!-- ── Teal checkerboard strip across top of label ── -->
+  <!-- row 1 of checker (teal squares on yellow) -->
+  <rect x="20" y="16" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="36" y="16" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="52" y="16" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="68" y="16" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="84" y="16" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="100" y="16" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="116" y="16" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="132" y="16" width="8" height="8" fill="#2d6b5a"/>
+  <!-- row 2 offset -->
+  <rect x="12" y="24" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="28" y="24" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="44" y="24" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="60" y="24" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="76" y="24" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="92" y="24" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="108" y="24" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="124" y="24" width="8" height="8" fill="#2d6b5a"/>
+  <rect x="140" y="24" width="8" height="8" fill="#2d6b5a"/>
+
+  <!-- ── Red/orange stripe band ── -->
+  <rect x="12" y="52" width="136" height="8"  fill="#d44c1a"/>
+  <rect x="12" y="60" width="136" height="4"  fill="#e06020"/>
+  <rect x="12" y="64" width="136" height="8"  fill="#d44c1a"/>
+
+  <!-- ── Tape window area (dark) ── -->
+  <rect x="44" y="36" width="72" height="36" fill="#2a1a1a"/>
+  <!-- inner lighter surround -->
+  <rect x="48" y="40" width="64" height="28" fill="#3d2828"/>
+
+  <!-- ── Left reel ── -->
+  <!-- reel hole -->
+  <rect x="52" y="44" width="20" height="20" fill="#1a0f0f"/>
+  <!-- reel spokes -->
+  <rect x="60" y="44" width="4"  height="20" fill="#5a3a3a"/>
+  <rect x="52" y="52" width="20" height="4"  fill="#5a3a3a"/>
+  <!-- reel hub -->
+  <rect x="58" y="50" width="8"  height="8"  fill="#7a5050"/>
+  <!-- reel centre -->
+  <rect x="60" y="52" width="4"  height="4"  fill="#9a7060"/>
+
+  <!-- ── Right reel ── -->
+  <rect x="88" y="44" width="20" height="20" fill="#1a0f0f"/>
+  <rect x="96" y="44" width="4"  height="20" fill="#5a3a3a"/>
+  <rect x="88" y="52" width="20" height="4"  fill="#5a3a3a"/>
+  <rect x="94" y="50" width="8"  height="8"  fill="#7a5050"/>
+  <rect x="96" y="52" width="4"  height="4"  fill="#9a7060"/>
+
+  <!-- ── Tape label (white rectangle between reels) ── -->
+  <rect x="74" y="48" width="12" height="8" fill="#f0ebe0"/>
+
+  <!-- ── Checkerboard pattern left of window (pixel X marks) ── -->
+  <!-- left checker block -->
+  <rect x="48" y="44" width="4" height="4" fill="#f0ebe0"/>
+  <rect x="44" y="44" width="4" height="4" fill="#2a1a1a"/>
+  <rect x="48" y="48" width="4" height="4" fill="#2a1a1a"/>
+  <rect x="44" y="48" width="4" height="4" fill="#f0ebe0"/>
+  <rect x="48" y="52" width="4" height="4" fill="#f0ebe0"/>
+  <rect x="44" y="52" width="4" height="4" fill="#2a1a1a"/>
+  <rect x="48" y="56" width="4" height="4" fill="#2a1a1a"/>
+  <rect x="44" y="56" width="4" height="4" fill="#f0ebe0"/>
+
+  <!-- right checker block -->
+  <rect x="108" y="44" width="4" height="4" fill="#2a1a1a"/>
+  <rect x="112" y="44" width="4" height="4" fill="#f0ebe0"/>
+  <rect x="108" y="48" width="4" height="4" fill="#f0ebe0"/>
+  <rect x="112" y="48" width="4" height="4" fill="#2a1a1a"/>
+  <rect x="108" y="52" width="4" height="4" fill="#2a1a1a"/>
+  <rect x="112" y="52" width="4" height="4" fill="#f0ebe0"/>
+  <rect x="108" y="56" width="4" height="4" fill="#f0ebe0"/>
+  <rect x="112" y="56" width="4" height="4" fill="#2a1a1a"/>
+
+  <!-- ── Bottom teeth / tabs ── -->
+  <!-- left tab -->
+  <rect x="16" y="88" width="12" height="8"  fill="#5a3a3a"/>
+  <rect x="20" y="96" width="4"  height="4"  fill="#5a3a3a"/>
+  <!-- centre teeth (5 teeth) -->
+  <rect x="48"  y="88" width="8"  height="8" fill="#5a3a3a"/>
+  <rect x="60"  y="88" width="8"  height="8" fill="#5a3a3a"/>
+  <rect x="72"  y="88" width="8"  height="8" fill="#5a3a3a"/>
+  <rect x="84"  y="88" width="8"  height="8" fill="#5a3a3a"/>
+  <rect x="96"  y="88" width="8"  height="8" fill="#5a3a3a"/>
+  <rect x="108" y="88" width="8"  height="8" fill="#5a3a3a"/>
+  <!-- right tab -->
+  <rect x="132" y="88" width="12" height="8"  fill="#5a3a3a"/>
+  <rect x="136" y="96" width="4"  height="4"  fill="#5a3a3a"/>
+
+  <!-- ── Left plus / screw decoration ── -->
+  <rect x="16" y="72" width="4" height="12" fill="#c8903a"/>
+  <rect x="12" y="76" width="12" height="4" fill="#c8903a"/>
+
+  <!-- ── Right plus / screw decoration ── -->
+  <rect x="140" y="72" width="4" height="12" fill="#c8903a"/>
+  <rect x="136" y="76" width="12" height="4" fill="#c8903a"/>
+
+</svg>

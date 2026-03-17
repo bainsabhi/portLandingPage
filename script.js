@@ -23,18 +23,48 @@ document.addEventListener("DOMContentLoaded", () => {
   const currentPage = window.location.pathname.split("/").pop()
   const navLinks = document.querySelectorAll("nav ul li a")
 
+  // For page-level links (e.g. interests.html), mark on load
   navLinks.forEach((link) => {
     const linkHref = link.getAttribute("href")
-
-    if (currentPage === "" && linkHref.startsWith("#")) {
-      // We're on index.html
-      if (linkHref === "#about") {
+    if (!linkHref.startsWith("#") && !linkHref.includes("#")) {
+      // Pure page link (no hash): active if it matches the current page
+      if (linkHref === currentPage || (currentPage === "" && linkHref === "index.html")) {
         link.classList.add("active")
       }
-    } else if (linkHref.includes(currentPage)) {
-      link.classList.add("active")
     }
   })
+
+  // For anchor links on the same page, track which section is in view on scroll
+  const anchorLinks = Array.from(navLinks).filter((link) => {
+    const href = link.getAttribute("href")
+    return href.startsWith("#")
+  })
+
+  if (anchorLinks.length > 0) {
+    const sectionIds = anchorLinks.map((link) => link.getAttribute("href").slice(1))
+    const sections = sectionIds.map((id) => document.getElementById(id)).filter(Boolean)
+
+    function updateActiveSection() {
+      // Find which section is currently most visible in the viewport
+      const scrollY = window.scrollY
+      const headerHeight = document.querySelector("header")?.offsetHeight || 100
+
+      let currentId = sectionIds[0]
+      sections.forEach((section) => {
+        if (scrollY >= section.offsetTop - headerHeight - 10) {
+          currentId = section.id
+        }
+      })
+
+      anchorLinks.forEach((link) => {
+        const href = link.getAttribute("href").slice(1)
+        link.classList.toggle("active", href === currentId)
+      })
+    }
+
+    window.addEventListener("scroll", updateActiveSection)
+    updateActiveSection()
+  }
 
   function checkReveal() {
     const triggerBottom = window.innerHeight * 0.8
