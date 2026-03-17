@@ -1,73 +1,30 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
-  <defs>
-    <linearGradient id="bgGrad" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
-      <stop offset="0%"   stop-color="#0d1880"/>
-      <stop offset="100%" stop-color="#111f9a"/>
-    </linearGradient>
-    <!-- subtle dot grid -->
-    <pattern id="dots" x="0" y="0" width="40" height="40" patternUnits="userSpaceOnUse">
-      <circle cx="1" cy="1" r="1.2" fill="#ffd700" opacity="0.08"/>
-    </pattern>
-  </defs>
 
-  <!-- Background -->
-  <rect width="1200" height="630" fill="url(#bgGrad)"/>
-  <rect width="1200" height="630" fill="url(#dots)"/>
+  <!-- Background: exact site blue -->
+  <rect width="1200" height="630" fill="#111f9a"/>
 
-  <!-- Gold accent bar left edge -->
-  <rect x="0" y="0" width="8" height="630" fill="#ffd700"/>
+  <!--
+    Replicating .logo exactly, scaled 8x:
+      .circle: width/height 20px -> r=80, border 2px -> stroke-width 16, margin-right 5px -> 40px
+      .filled: background gold, no fill on first
+      font-weight: 600, color gold
 
-  <!-- Gold accent bar bottom -->
-  <rect x="0" y="598" width="1200" height="8" fill="#ffd700" opacity="0.35"/>
+    circle 1 center x = 230 + 80 = 310
+    circle 2 center x = 310 + 80(r) + 40(margin) + 80(r) = 510
+    text x = 510 + 80(r) + 40(gap) = 630
+  -->
 
-  <!-- Logo circles — top left -->
-  <circle cx="80"  cy="80" r="18" fill="none" stroke="#ffd700" stroke-width="3"/>
-  <circle cx="114" cy="80" r="18" fill="#ffd700"/>
+  <!-- Circle 1: outline, no fill (r=72 so outer edge r+stroke/2=80 matches filled circle) -->
+  <circle cx="310" cy="315" r="72" fill="none" stroke="#ffd700" stroke-width="16"/>
 
-  <!-- Site name next to logo -->
-  <text x="148" y="89" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="28" font-weight="700" fill="#ffd700" letter-spacing="1">Abhi</text>
+  <!-- Circle 2: filled, same radius -->
+  <circle cx="510" cy="315" r="80" fill="#ffd700"/>
 
-  <!-- Divider line under header -->
-  <line x1="64" y1="116" x2="560" y2="116" stroke="#ffd700" stroke-width="1" opacity="0.25"/>
+  <!-- "Abhi" text -->
+  <text x="630" y="315"
+        font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', Helvetica, Arial, sans-serif"
+        font-size="160" font-weight="600"
+        fill="#ffd700"
+        dominant-baseline="central">Abhi</text>
 
-  <!-- Main headline -->
-  <text x="64" y="280" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="96" font-weight="700" fill="#ffd700" letter-spacing="-1">learning</text>
-  <text x="64" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="96" font-weight="700" fill="#ffd700" letter-spacing="-1">building</text>
-  <text x="64" y="480" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="96" font-weight="700" fill="rgba(255,215,0,0.4)" letter-spacing="-1">thunking</text>
-
-  <!-- Right side — role / tag -->
-  <text x="760" y="260" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="20" font-weight="400" fill="rgba(255,255,255,0.5)" letter-spacing="3">ROUTING / EMBEDDED</text>
-  <text x="760" y="310" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="48" font-weight="700" fill="#ffffff" letter-spacing="-0.5">Abhijit Bains</text>
-
-  <!-- Divider -->
-  <line x1="760" y1="340" x2="1136" y2="340" stroke="#ffd700" stroke-width="1.5" opacity="0.4"/>
-
-  <!-- Project tags -->
-  <text x="760" y="380" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="17" fill="rgba(255,255,255,0.55)" letter-spacing="1">PROJECTS</text>
-
-  <!-- Project pill: ViteTracker -->
-  <rect x="760" y="398" width="150" height="34" rx="17" fill="rgba(255,215,0,0.12)" stroke="#ffd700" stroke-width="1" opacity="0.8"/>
-  <text x="835" y="420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="15" font-weight="600" fill="#ffd700" text-anchor="middle">ViteTracker</text>
-
-  <!-- Project pill: ClankerMeter -->
-  <rect x="924" y="398" width="180" height="34" rx="17" fill="rgba(255,215,0,0.12)" stroke="#ffd700" stroke-width="1" opacity="0.8"/>
-  <text x="1014" y="420" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="15" font-weight="600" fill="#ffd700" text-anchor="middle">ClankerMeter</text>
-
-  <!-- Project pill: lofiSaver -->
-  <rect x="760" y="446" width="140" height="34" rx="17" fill="rgba(255,215,0,0.12)" stroke="#ffd700" stroke-width="1" opacity="0.8"/>
-  <text x="830" y="468" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="15" font-weight="600" fill="#ffd700" text-anchor="middle">lofiSaver</text>
-
-  <!-- URL bottom right -->
-  <text x="1136" y="580" font-family="-apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif"
-        font-size="18" fill="rgba(255,215,0,0.5)" text-anchor="end" letter-spacing="1">bainsabhi.github.io/portLandingPage</text>
 </svg>
